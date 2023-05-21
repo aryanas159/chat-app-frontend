@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@100;300;400;500;600;700;800;900&display=swap');
+/* body {
+    min-height: 100vh;
+    min-width: 100vw;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+} */
+#root {
+    min-height: 100vh;
+    min-width: 100vw;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+:root {
+    --FF: Arial, Helvetica, sans-serif;
+}
