@@ -123,7 +123,7 @@ const Chat = () => {
 	};
 
 	const connectToWs = () => {
-		const ws = new WebSocket(`wss://mern-chat-api-4ml5.onrender.com:1234`);
+		const ws = new WebSocket(`ws://localhost:1234`);
 		setWs(ws);
 		console.log(ws)
 		ws.addEventListener('open', () => {console.log('opened')})
