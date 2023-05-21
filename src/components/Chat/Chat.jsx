@@ -123,7 +123,7 @@ const Chat = () => {
 	};
 
 	const connectToWs = () => {
-		const ws = new WebSocket("ws://mern-chat-api-md0y.onrender.com:8086");
+		const ws = new WebSocket("wss://mern-chat-api-md0y.onrender.com:8086");
 		setWs(ws);
 		ws.addEventListener("message", handleMessages);
 		ws.addEventListener("close", connectToWs); // automatically reconnects to the web socket
