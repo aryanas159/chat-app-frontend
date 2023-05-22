@@ -123,7 +123,7 @@ const Chat = () => {
 	};
 
 	const connectToWs = () => {
-		const ws = new WebSocket("ws://localhost:8080");
+		const ws = new WebSocket(import.meta.env.VITE_WEBSOCKET_URL);
 		setWs(ws);
 		console.log(ws)
 		ws.addEventListener('open', () => {console.log('opened')})
