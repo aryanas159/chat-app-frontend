@@ -3,7 +3,7 @@ import axios from "axios";
 import { UserContextProvider, UserContext } from "./contexts/UserContext";
 import "./App.css"
 function App() {
-	axios.defaults.baseURL = "https://mern-chat-api-4ml5.onrender.com";
+	axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
 	axios.defaults.withCredentials = true;
 
 	return (
