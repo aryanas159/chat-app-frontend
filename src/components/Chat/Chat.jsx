@@ -14,7 +14,7 @@ const imgExt = ["png", "jpg", "jpeg", "webp"];
 const Chat = () => {
 	const [ws, setWs] = useState("");
 	const { id, username, setId, setUsername } = useContext(UserContext);
-	const [onlineUsers, setOnlineUsers] = useState([]);
+	const [onlineUsers, setOnlineUsers] = useState({});
 	const [selectedUserId, setSelectedUserId] = useState("");
 	const [newMessageText, setNewMessageText] = useState("");
 	const [messages, setMessages] = useState([]);
@@ -159,12 +159,15 @@ const Chat = () => {
 			const usersArray = res.data;
 
 			const offlineUsersArray = usersArray.filter((user) => {
-				return !Object.keys(onlineUsers).includes(user._id);
+				if (Object.keys(onlineUsers).length)
+				{return !Object.keys(onlineUsers).includes(user._id);}
 			});
 			const offlineUsersObj = {};
-			offlineUsersArray.forEach((user) => {
-				offlineUsersObj[user._id] = user.username;
-			});
+			if (offlineUsersArray.length) {
+				offlineUsersArray.forEach((user) => {
+					offlineUsersObj[user._id] = user.username;
+				});
+			}
 			setOfflineUsers(offlineUsersObj);
 		});
 	}, [onlineUsers]);
@@ -183,7 +186,7 @@ const Chat = () => {
 						<div className="chat__title-text">MERN CHAT</div>
 					</div>
 					<div className="chat__contacts">
-						{Object.keys(onlineUsers).map((userId) => {
+						{Object.keys(onlineUsers) ? Object.keys(onlineUsers).map((userId) => {
 							if (userId !== id) {
 								return (
 									<div onClick={() => {
@@ -199,8 +202,9 @@ const Chat = () => {
 									</div>
 								);
 							}
-						})}
-						{Object.keys(offlineUsers).map((userId) => {
+						}) : <></>}
+
+						{Object.keys(offlineUsers) ? Object.keys(offlineUsers).map((userId) => {
 							if (userId !== id) {
 								return (
 									<div onClick={() => {
@@ -216,7 +220,7 @@ const Chat = () => {
 									</div>
 								);
 							}
-						})}
+						}) : <></>}
 					</div>
 					<div className="chat__profile">
 						<div className="username">
