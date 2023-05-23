@@ -6,7 +6,7 @@ const User = ({id, username, selected, online}) => {
         <div className={"user" + (selected ? " selected" : '')}>
             <div className="user__avatar" style={{backgroundColor: bgColor[colorId]}}>
                 {online ? <div className="user__online-indicator"></div> : <></>}
-                {username[0].toUpperCase()}
+                {/* {username[0].toUpperCase()} */}
             </div>
             <div className="user__username">{username}</div>
         </div>
