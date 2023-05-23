@@ -149,6 +149,7 @@ const Chat = () => {
 	}, [messages]);
 	useEffect(() => {
 		if (!!selectedUserId) {
+			console.log("getting messages")
 			axios.get(`/messages/${selectedUserId}`).then((res) => {
 				setMessages(res.data);
 			});
