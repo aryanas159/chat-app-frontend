@@ -126,6 +126,7 @@ const Chat = () => {
 		const ws = new WebSocket(import.meta.env.VITE_WEBSOCKET_URL);
 		setWs(ws);
 		console.log(ws)
+		ws.onopen = () => {console.log("opened")}
 		ws.addEventListener('open', () => {console.log('opened')})
 		ws.addEventListener("message", handleMessages);
 		ws.addEventListener("close", connectToWs); // automatically reconnects to the web socket
