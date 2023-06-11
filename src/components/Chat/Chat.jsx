@@ -264,7 +264,7 @@ const Chat = () => {
 								) ? (
 									<img
 										src={
-											axios.defaults.baseURL + "/uploads/" + message.file
+											axios.defaults.baseURL + "uploads/" + message.file
 										}
 										alt="image"
 										className="image-sent"
