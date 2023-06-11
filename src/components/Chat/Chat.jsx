@@ -247,7 +247,7 @@ const Chat = () => {
 						{message.file ? (
 							<a
 								target="_blank"
-								href={axios.defaults.baseURL + "/uploads/" + message.file}
+								href={axios.defaults.baseURL + "uploads/" + message.file}
 							>
 								<div className="file__name">
 									{message.file}
@@ -257,7 +257,7 @@ const Chat = () => {
 										className="attachment-icon"
 									/>
 								</div>
-								{/* {imgExt.includes(
+								{imgExt.includes(
 									message.file.split(".")[
 										message.file.split(".").length - 1
 									]
@@ -268,10 +268,10 @@ const Chat = () => {
 										}
 										alt="image"
 										className="image-sent"
-									/>
+									/> || <></>
 								) : (
 									<></>
-								)} */}
+								)}
 							</a>
 						) : (
 							<p>{message.text}</p>
