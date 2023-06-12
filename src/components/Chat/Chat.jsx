@@ -234,10 +234,12 @@ const Chat = () => {
 		)
 	}
 	console.log(duplicateMessagesExcluded)
-	
+
 	const Messages = () => {
 		return (
-			duplicateMessagesExcluded.map((message) => {
+			duplicateMessagesExcluded
+			.filter((message) => message.sender === selectedUserId)
+			.map((message) => {
 				return (
 					<div
 						className={
