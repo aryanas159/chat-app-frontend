@@ -322,4 +322,7 @@ body {
 		max-height: 180px;
 		min-height: 140px;
 	}
+	.chat__contacts-and-profile {
+		height: 90vh;
+	}
 }
