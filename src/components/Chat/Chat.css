@@ -270,6 +270,7 @@ body {
 		position: relative;
 		overflow: hidden;
 		width: 100%;
+		padding: 20px;
 	}
 	.chat__sidebar {
 		position: fixed;
@@ -311,7 +312,7 @@ body {
 		width: 80%;
 	}
 	.chat__text-input {
-		min-width: none;
+		min-width: 10px;
 	}
 	.chat__text-input::placeholder {
 		font-size: 0.9rem;
