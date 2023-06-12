@@ -268,7 +268,7 @@ body {
 @media screen and (max-width: 500px) {
 	.chat {
 		position: relative;
-		overflow-y: hidden;
+		overflow: hidden;
 	}
 	.chat__sidebar {
 		position: fixed;
