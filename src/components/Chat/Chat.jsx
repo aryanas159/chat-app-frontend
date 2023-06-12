@@ -233,8 +233,6 @@ const Chat = () => {
 				</div>
 		)
 	}
-	console.log(duplicateMessagesExcluded)
-
 	const Messages = () => {
 		return (
 			duplicateMessagesExcluded
