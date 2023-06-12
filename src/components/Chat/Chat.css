@@ -299,6 +299,9 @@ body {
 		padding-top: 10px;
 		padding-bottom: 10px;
 	}
+	.chat__chatbox__messages {
+		padding-top: 30px;
+	}
 	.chat__chatbox__messages__message p,
 	.chat__chatbox__messages__message a {
 		background-color: #000;
@@ -323,6 +326,6 @@ body {
 		min-height: 140px;
 	}
 	.chat__contacts-and-profile {
-		height: 90vh;
+		height: 95vh;
 	}
 }
