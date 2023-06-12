@@ -238,7 +238,7 @@ const Chat = () => {
 	const Messages = () => {
 		return (
 			duplicateMessagesExcluded
-			.filter((message) => message.sender === selectedUserId)
+			.filter((message) => message.sender === selectedUserId || message.receipient === id)
 			.map((message) => {
 				return (
 					<div
