@@ -156,7 +156,7 @@ body {
 	height: 20px;
 }
 .chat__chatbox__messages__message a .image-sent {
-	height: 150px;
+	height: 200px;
 }
 .mine {
 	align-items: flex-end;
