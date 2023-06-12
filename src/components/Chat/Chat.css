@@ -266,9 +266,6 @@ body {
 }
 
 @media screen and (max-width: 500px) {
-	body {
-		padding: 10px 10px 4px 4px;
-	}
 	.chat {
 		position: relative;
 		overflow: hidden;
@@ -277,6 +274,8 @@ body {
 	.chat__sidebar {
 		position: fixed;
         z-index: 1;
+		height: 100vh;
+		padding-bottom: 10px;
 	}
 	.chat__sidebar__toggle-button {
 		background-color: transparent;
