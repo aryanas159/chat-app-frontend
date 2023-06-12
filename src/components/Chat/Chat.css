@@ -269,7 +269,7 @@ body {
 	.chat {
 		position: relative;
 		overflow: hidden;
-		width: 100vw;
+		width: 100%;
 	}
 	.chat__sidebar {
 		position: fixed;
@@ -300,7 +300,7 @@ body {
 	.chat__chatbox__messages__message p,
 	.chat__chatbox__messages__message a {
 		background-color: #000;
-		padding: 10px;
+		padding: 5px;
 		max-width: 80vw;
 	}
 	.mine p,
@@ -309,6 +309,9 @@ body {
 	}
 	.chat__chatbox__input {
 		max-width: 80vw;
+	}
+	.chat__text-input {
+		min-width: none;
 	}
 	.chat__chatbox__messages__message a .image-sent {
 		max-height: 180px;
