@@ -308,10 +308,13 @@ body {
 		background-color: #32073d;
 	}
 	.chat__chatbox__input {
-		max-width: 80vw;
+		width: 100%;
 	}
 	.chat__text-input {
 		min-width: none;
+	}
+	.chat__text-input::placeholder {
+		font-size: 0.8rem;
 	}
 	.chat__chatbox__messages__message a .image-sent {
 		max-height: 180px;
