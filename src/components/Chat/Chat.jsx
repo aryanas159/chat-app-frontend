@@ -236,8 +236,9 @@ const Chat = () => {
 	const Messages = () => {
 		return (
 			duplicateMessagesExcluded.map((message) => {
-				return (
-					<div
+				return 
+					message.sender === selectedUserId ? (
+						<div
 						className={
 							"chat__chatbox__messages__message" +
 							(message.sender === id ? " mine" : "")
@@ -277,7 +278,8 @@ const Chat = () => {
 							<p>{message.text}</p>
 						)}
 					</div>
-				);
+					) : <></>
+				;
 			})
 		)
 	}
