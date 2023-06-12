@@ -83,6 +83,7 @@ body {
 	flex: 1;
 	color: white;
 	max-width: 100%;
+	overflow: hidden;
 }
 .chat__chatbox__empty {
     font-size: 1.3rem;
