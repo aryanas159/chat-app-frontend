@@ -325,7 +325,9 @@ body {
 	}
 	.chat__chatbox__messages__message a .image-sent {
 		max-height: 180px;
-		min-height: 140px;
+		max-width: 250px;
+		height: auto;
+		width: auto;
 	}
 	.chat__contacts-and-profile {
 		height: 95vh;
