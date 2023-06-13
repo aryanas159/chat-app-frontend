@@ -156,7 +156,10 @@ body {
 	height: 20px;
 }
 .chat__chatbox__messages__message a .image-sent {
-	height: 200px;
+	max-height: 500px;
+    max-width: 30vw;
+    height: auto;
+    width: auto;
 }
 .mine {
 	align-items: flex-end;
@@ -324,7 +327,7 @@ body {
 		font-size: 0.9rem;
 	}
 	.chat__chatbox__messages__message a .image-sent {
-		max-height: 180px;
+		max-height: 400px;
 		max-width: 250px;
 		height: auto;
 		width: auto;
